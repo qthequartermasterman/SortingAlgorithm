@@ -10,15 +10,17 @@
 #include <iostream>
 #include "utilityFunctions.hpp"
 #include "MergeSort.hpp"
+#include "time.h"
 
 int main(int argc, const char * argv[]) {
+    srand(time(NULL));
     const int size = 10;
     
     int array[size];
     
     //Initialize the array with random integers.
     for (int i = 0; i < size; i++){
-        array[i] = rand();
+        array[i] = rand()%10;
     }
     //Print the unsorted array
     std::cout << "Unsorted array.\n";
@@ -27,5 +29,6 @@ int main(int argc, const char * argv[]) {
     //Sort the array and print.
     std::cout << "Sorted array.\n";
     mergeSort(array, 0, size-1);
+    print_array(array, size);
     return 0;
 }

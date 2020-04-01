@@ -12,10 +12,10 @@
 
 void print_array(int array[], int length){
     for (int i = 0; i < length; i++){
-        std::cout << array[i] << " ";
+        std::cout << array[i];
         if (i < length - 1){
             std::cout << ", ";
         }
-        std::cout << std::endl;
     }
+    std::cout << std::endl;
 } //array is the array to be printed and length is the length of the array
