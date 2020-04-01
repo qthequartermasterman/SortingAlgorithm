@@ -9,9 +9,9 @@
 
 #include "MergeSort.hpp"
 //The merge sort algorithm sorts at these complexities:
-//Best case scenario    O(n * log(n))            We will in the best case still have to split the array in half log_2(n) times and then check each element once
-//Average case scenario O(n*log(n))     After splitting the array in half log(n) times, we still have to swap, but the swaps happen in linear time
-//Worst case scenario   O(n*log(n))     After splitting the array in half log(n) times, we will have to swap every element, but the swaps will happen in linear time, albeit slower than in the average case
+//Best case scenario    O(n*log(n))     The array is split into trees and trees are merged log(n) times (The array is split into half log(n) times)
+//Average case scenario O(n*log(n))     The array is split into trees and trees are merged log(n) times. Swaps are at most linear.
+//Worst case scenario   O(n*log(n))     The array is split into trees and trees are merged log(n) times. Swaps are at most linear.
 void merge(int arr[], int left, int middle, int right){
     //int left is the index of the first element of the array to sort
     //int middle is the index of where the break in the middle is

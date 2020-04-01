@@ -14,7 +14,7 @@
 #include "time.h"
 
 int main(int argc, const char * argv[]) {
-    srand(time(NULL));
+    srand((int) time(NULL));
     const int size = 10;
     
     int array[size];

@@ -1,4 +1,4 @@
-///*=============HeapSort.cpp================*/
+/*=============HeapSort.cpp================*/
 /*
  DESCRIPTION:   
  AUTHOR:        Andrew P. Sansom
@@ -8,6 +8,10 @@
  =============HeapSort.cpp================*/
 
 #include "HeapSort.hpp"
+//The heap sort algorithm sorts at these complexities:
+//Best case scenario    O(n*log(n))     On checking every element, we check half of the other elemnts to check if it a heap
+//Average case scenario O(n*log(n))     On checking every element, we check half of the other elemnts to fix the heap
+//Worst case scenario   O(n*log(n))     On checking every element, we check half of the other elemnts to fix the heap
 
 void arrange_array_into_heap(int arr[], int size, int root){
     //We will arrange the array into a heap in pre-fix notation
