@@ -10,6 +10,7 @@
 #include <iostream>
 #include "utilityFunctions.hpp"
 #include "MergeSort.hpp"
+#include "HeapSort.hpp"
 #include "time.h"
 
 int main(int argc, const char * argv[]) {
@@ -20,7 +21,7 @@ int main(int argc, const char * argv[]) {
     
     //Initialize the array with random integers.
     for (int i = 0; i < size; i++){
-        array[i] = rand()%10;
+        array[i] = rand()%50;
     }
     //Print the unsorted array
     std::cout << "Unsorted array.\n";
@@ -28,7 +29,8 @@ int main(int argc, const char * argv[]) {
     
     //Sort the array and print.
     std::cout << "Sorted array.\n";
-    mergeSort(array, 0, size-1);
+    //mergeSort(array, 0, size-1);
+    heap_sort(array, size);
     print_array(array, size);
     return 0;
 }
